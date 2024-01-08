@@ -1,10 +1,14 @@
+import { ModeToggle } from "@/components/modeToggle"
 import { Button } from "@/components/ui/button"
 import { UserButton } from "@clerk/nextjs"
 
 export default function Home() {
   return (
     <div className="p-5 flex flex-col">
-      <UserButton afterSignOutUrl="/" />
+      <div className="flex space-x-3 items-center">
+        <UserButton afterSignOutUrl="/" />
+        <ModeToggle />
+      </div>
 
       <div className="p-5 space-y-5">
         <h1 className='text-green-700 bg-red-300 font-bold flex justify-center'>Hello, welcome to the Main Page</h1>
